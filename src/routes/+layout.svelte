@@ -6,7 +6,7 @@
     Episodes: /episode-[number]/+layout.server.ts "prerender = true"
 </h2>
 <ul>
-    {#each Array(10) as episode, index}
+    {#each Array(5) as episode, index}
         <li>
             <a href="/episodes-{index+1}">Episode #{index+1}</a>
         </li>
@@ -17,9 +17,20 @@
     Episodes: /noprerender-[number]/+layout.server.ts "prerender not set"
 </h2>
 <ul>
-    {#each Array(10) as episode, index}
+    {#each Array(5) as episode, index}
         <li>
             <a href="/noprerender-{index+1}">No Prerender Episode #{index+1}</a>
+        </li>
+    {/each}
+</ul>
+<hr>
+<h2>
+    Episodes: /nolayout-[number]/+page.server.ts "prerender not set" - no +layout.server.ts involved
+</h2>
+<ul>
+    {#each Array(5) as episode, index}
+        <li>
+            <a href="/nolayout-{index+1}">No Layout Episode #{index+1}</a>
         </li>
     {/each}
 </ul>
