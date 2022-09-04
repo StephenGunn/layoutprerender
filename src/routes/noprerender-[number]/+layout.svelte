@@ -4,14 +4,10 @@
 
 </script>
 
-<h1>Test Episode #{data.number} - {data.episode.title}</h1>
+<h1>Dynamic Test Episode #{data.number} - {data.episode.title} - not pre-rendered at +layout level</h1>
 <nav>
     <a href="/episodes-{data.number}">Episode Home Page</a> | 
     <a href="/episodes-{data.number}/gallery">Episode #{data.number} Gallery</a>
 </nav>
 <hr>
 <slot></slot>
-
-<style>
-
-</style>

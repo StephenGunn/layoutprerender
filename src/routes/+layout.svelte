@@ -3,7 +3,7 @@
 </nav>
 <hr>
 <h2>
-    Select a fake episode with prerender set to true:
+    Episodes: /episode-[number]/+layout.server.ts "prerender = true"
 </h2>
 <ul>
     {#each Array(10) as episode, index}
@@ -14,7 +14,7 @@
 </ul>
 <hr>
 <h2>
-    Select a fake episode with prerender not set at all:
+    Episodes: /noprerender-[number]/+layout.server.ts "prerender not set"
 </h2>
 <ul>
     {#each Array(10) as episode, index}
