@@ -7,10 +7,11 @@
             menu
         </header>
         <nav>
-            <a href="/">home page</a>
+            <a href="/">- home page</a><br/>
+            <a href="https://github.com/StephenGunn/layoutprerender" target="_blank">- https://github.com/StephenGunn/layoutprerender</a><br/>
         </nav>
         <h2>
-            Episodes: /episode-[number]/+layout.server.ts "prerender = true"
+            +layout.server.ts "prerender = true"
         </h2>
         <ul>
             {#each Array(5) as episode, index}
@@ -21,7 +22,7 @@
         </ul>
         <hr>
         <h2>
-            Episodes: /noprerender-[number]/+layout.server.ts "prerender not set"
+            +layout.server.ts "prerender not set"
         </h2>
         <ul>
             {#each Array(5) as episode, index}
@@ -32,8 +33,11 @@
         </ul>
         <hr>
         <h2>
-            Episodes: /nolayout-[number]/+page.server.ts "prerender not set" - no +layout.server.ts involved
+            +page.server.ts "prerender not set"
         </h2>
+        <p>
+            no /+layout.server.ts involved in this route
+        </p>
         <ul>
             {#each Array(5) as episode, index}
                 <li>
